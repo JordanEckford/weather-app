@@ -1,26 +1,32 @@
 import LocationCards from "./LocationCards";
 import { useState, useEffect } from "react";
+import weatherObj from "../templateWeatherObj";
+console.log(weatherObj);
 
 function LocationList({ searchLong, searchLat }) {
- const [weather, setWeather] = useState("hello");
- console.log(searchLat, searchLong);
- const appID = "796a348dc20c3239ab56d7cabc4a83bd";
- const url = `https://api.openweathermap.org/data/2.5/weather?lat=${searchLat}&lon=${searchLong}&appid=${appID}`;
+  const [weather, setWeather] = useState(weatherObj);
+  const [isLoading, setIsLoading] = useState(true);
 
- useEffect(() => {
-  fetch(url).then((response) => {
-   return response.json().then((weatherData) => {
-    setWeather(weatherData);
-   });
-  });
- }, []);
+  const appID = "796a348dc20c3239ab56d7cabc4a83bd";
+  const url = `https://api.openweathermap.org/data/2.5/weather?lat=${searchLat}&lon=${searchLong}&appid=${appID}&units=metric`;
 
- return (
-  <ul>
-   Weather by location:
-   <LocationCards weather={weather} />
-  </ul>
- );
+  useEffect(() => {
+    fetch(url).then((response) => {
+      return response.json().then((weatherData) => {
+        setWeather(weatherData);
+        setIsLoading(false);
+      });
+    });
+  }, [searchLat]);
+
+  // add loading pattern
+  if (isLoading) return <p>Loading...</p>;
+  return (
+    <ul>
+      Weather by location:
+      <LocationCards weather={weather} />
+    </ul>
+  );
 }
 
 export default LocationList;

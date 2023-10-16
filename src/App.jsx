@@ -5,18 +5,18 @@ import Input from "./components/Input";
 import LocationList from "./components/LocationList";
 
 function App() {
- const [searchLat, setSearchLat] = useState("");
- const [searchLong, setSearchLong] = useState("");
+  const [searchLat, setSearchLat] = useState("53.23812");
+  const [searchLong, setSearchLong] = useState("-1.3568");
 
- return (
-  <>
-   <Header />
+  return (
+    <>
+      <Header />
 
-   <Input setSearchLat={setSearchLat} setSearchLong={setSearchLong} />
+      <Input setSearchLat={setSearchLat} setSearchLong={setSearchLong} />
 
-   <LocationList searchLat={searchLat} searchLong={searchLong} />
-  </>
- );
+      <LocationList searchLat={searchLat} searchLong={searchLong} />
+    </>
+  );
 }
 
 export default App;
