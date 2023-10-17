@@ -4,3 +4,37 @@
  border: 1px red solid;
  padding: 10px;
 }
+/* 
+.leaflet-container {
+ height: 20vh;
+ width: 60vw;
+}
+.leaflet-control-zoom-in {
+ height: 1%;
+}
+.leaflet-control-attribution {
+ width: 150%;
+ height: 10%;
+ background-color: blue;
+}
+
+.leaflet-control {
+ height: 5%;
+ background-color: green;
+}
+.leaflet-top {
+ height: 5px;
+}
+
+span {
+ display: block;
+ height: 1%;
+} */
+
+.leaflet-container {
+ height: 90%;
+ width: 90%;
+}
+#map {
+ height: 300px;
+}
