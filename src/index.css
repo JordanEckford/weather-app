@@ -1,7 +1,6 @@
 * {
  margin: auto;
  text-align: center;
- border: 1px red solid;
  padding: 10px;
 }
 /* 
@@ -37,4 +36,17 @@ span {
 }
 #map {
  height: 300px;
+}
+
+.weather-forecast {
+ display: grid;
+ grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+}
+
+.daily-weather {
+ border: black solid 1px;
+}
+
+ul {
+ border: black 1px solid;
 }
