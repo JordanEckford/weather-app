@@ -92,7 +92,7 @@ button:active {
 
 .daily-weather {
  border: black solid 1px;
- border-radius: 15px;
+ border-radius: 5px;
  width: 40%;
  padding: 1% 1% 1% 5%;
  margin: 20px auto;
@@ -136,7 +136,7 @@ li {
  padding: 0;
  margin: 5px auto;
  border: solid black 0.5px;
- border-radius: 10px;
+ border-radius: 5px;
  justify-self: stretch;
 }
 
@@ -146,4 +146,23 @@ li {
 .forecast-img {
  padding: 0;
  text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+ .weather-forecast {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+ }
+ .daily-weather {
+  width: 80%;
+ }
+ .submit,
+ .search-by {
+  width: 50%;
+ }
+ #client-input-latitude,
+ #client-input-longitude,
+ #client-input-city {
+  width: 50%;
+ }
 }

@@ -21,7 +21,6 @@ export default function LocationCardForecast({ weatherForecast }) {
         <p className="forecast-time">{data.dt_txt.slice(11, 13) + ":00"}</p>
         <img className="forecast-img" src={iconURL}></img>
        </li>
-       {/* {data.dt_txt.slice(11, 13) === "21" ? <div className="divider"></div> : null} */}
       </>
      );
     })}
