@@ -12,10 +12,11 @@ function Input({ setSearchLat, setSearchLong }) {
  }
 
  return (
-  <form onSubmit={handleSubmit}>
-   <label htmlFor="client-input-latitude">Latitude:</label>
+  <form className="search-form" onSubmit={handleSubmit}>
+   <label htmlFor="client-input-latitude"></label>
    <input
     id="client-input-latitude"
+    placeholder="Latitude"
     type="text"
     value={userInputLat}
     onChange={(event) => {
@@ -23,17 +24,20 @@ function Input({ setSearchLat, setSearchLong }) {
      setUserInputLat(value);
     }}
    />
-   <label htmlFor="client-input-longitude">Longitude:</label>
+   <label htmlFor="client-input-longitude"></label>
    <input
     id="client-input-longitude"
     type="text"
+    placeholder="Longitude"
     value={userInputLong}
     onChange={(event) => {
      const value = event.target.value;
      setUserInputLong(value);
     }}
    />
-   <button type="submit">Submit</button>
+   <button className="submit" type="submit">
+    Submit
+   </button>
   </form>
  );
 }

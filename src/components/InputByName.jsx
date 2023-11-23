@@ -19,18 +19,19 @@ function InputByName({ setSearchLat, setSearchLong }) {
  }
 
  return (
-  <form onSubmit={handleSubmit}>
-   <label htmlFor="client-input-city">City Name:</label>
+  <form className="search-form" onSubmit={handleSubmit}>
+   <label htmlFor="client-input-city"></label>
    <input
     id="client-input-city"
     type="text"
+    placeholder="City Name"
     value={userInput}
     onChange={(event) => {
      const value = event.target.value;
      setUserInput(value);
     }}
    />
-   <button>Submit</button>
+   <button className="submit">Search</button>
   </form>
  );
 }

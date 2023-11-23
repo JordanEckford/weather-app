@@ -1,41 +1,88 @@
-* {
+body {
+ width: 100%;
+ padding: 0;
+ margin: 0;
+}
+#root {
+ font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+ width: 100%;
+ padding: 0;
+ margin: 0;
+}
+.banner {
+ background-image: url(https://www.americanelements.com/sites/public/files/images/headers/weather%20mod%20banner.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+ display: flex;
+ border-bottom: solid black 3px;
+ height: 10vh;
+}
+h1 {
  margin: auto;
  text-align: center;
- padding: 10px;
+ color: white;
+ font-size: 6vh;
+ padding: 0;
 }
-/* 
-.leaflet-container {
- height: 20vh;
- width: 60vw;
+h2 {
+ margin: auto;
+ text-align: center;
 }
-.leaflet-control-zoom-in {
- height: 1%;
-}
-.leaflet-control-attribution {
- width: 150%;
- height: 10%;
- background-color: blue;
+button {
+ background-color: #336e99;
+ border: 1px solid transparent;
+ border-radius: 3px;
+ box-shadow: rgba(255, 255, 255, 0.4) 0 1px 0 0 inset;
+ box-sizing: border-box;
+ color: #fff;
+ cursor: pointer;
+ display: inline-block;
+ font-size: 1.2rem;
+ font-weight: 400;
+ margin: 0;
+ outline: none;
+ padding: 8px 0.8em;
 }
 
-.leaflet-control {
- height: 5%;
- background-color: green;
-}
-.leaflet-top {
- height: 5px;
+button:hover,
+button:focus {
+ background-color: #07c;
 }
 
-span {
+button:focus {
+ box-shadow: 0 0 0 4px rgba(0, 149, 255, 0.15);
+}
+
+button:active {
+ background-color: #0064bd;
+ box-shadow: none;
+}
+
+.search-form {
+ display: flex;
+ flex-direction: column;
+ text-align: center;
+ margin: 5vh auto auto auto;
+}
+.search-by {
+ margin: 0 auto;
+ width: 15%;
  display: block;
- height: 1%;
-} */
-
-.leaflet-container {
- height: 90%;
- width: 90%;
+ font-size: 1rem;
 }
-#map {
- height: 300px;
+#client-input-latitude,
+#client-input-longitude,
+#client-input-city {
+ width: 30%;
+ margin: 5px auto;
+ border-radius: 5px;
+ height: 2rem;
+ text-align: center;
+ font-size: 1.5rem;
+}
+.submit {
+ width: 15%;
+ margin: 10px auto;
 }
 
 .weather-forecast {
@@ -45,8 +92,58 @@ span {
 
 .daily-weather {
  border: black solid 1px;
+ border-radius: 15px;
+ width: 40%;
+ padding: 1% 1% 1% 5%;
+ margin: 20px auto;
+ display: grid;
+ grid-template-columns: 2fr 1fr;
+ grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.daily-img {
+ grid-column: 2;
+ grid-row: 1/4;
+ margin: 0 auto;
+}
+.daily-fave {
+ grid-column: 1;
+ grid-row: 5/6;
+ width: 30%;
+}
+.daily-temp {
+ grid-column: 2;
+ grid-row: 4/5;
+ text-align: center;
+ font-size: larger;
+}
+
+.daily-location,
+.daily-description,
+.daily-temp,
+.daily-maxmin,
+.daily-wind {
+ margin: 0;
 }
 
 ul {
- border: black 1px solid;
+ padding: 1%;
+ width: 90%;
+ margin: auto;
+}
+li {
+ list-style: none;
+ background-color: rgba(0, 25, 43, 0.096);
+ padding: 0;
+ margin: 5px auto;
+ border: solid black 0.5px;
+ border-radius: 10px;
+ justify-self: stretch;
+}
+
+.forecast-temp,
+.forecast-date,
+.forecast-time,
+.forecast-img {
+ padding: 0;
+ text-align: center;
 }

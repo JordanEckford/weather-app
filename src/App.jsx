@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Input from "./components/Input";
 import WeatherHandler from "./components/weatherHandler";
 import InputByName from "./components/InputByName";
+import SearchControl from "./components/SearchControl";
 
 function App() {
  const [searchLat, setSearchLat] = useState("53.23812");
@@ -12,28 +13,8 @@ function App() {
  return (
   <>
    <Header />
-   {byLatLong ? (
-    <button
-     onClick={() => {
-      setByLatLong(false);
-     }}
-    >
-     {" "}
-     Change to name
-    </button>
-   ) : (
-    <button
-     onClick={() => {
-      setByLatLong(true);
-     }}
-    >
-     {" "}
-     change to Lat Long
-    </button>
-   )}
-
    {byLatLong ? <Input setSearchLat={setSearchLat} setSearchLong={setSearchLong} /> : <InputByName setSearchLat={setSearchLat} setSearchLong={setSearchLong} />}
-
+   <SearchControl byLatLong={byLatLong} setByLatLong={setByLatLong} />
    <WeatherHandler searchLat={searchLat} searchLong={searchLong} />
   </>
  );

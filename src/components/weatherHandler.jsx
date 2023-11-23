@@ -211,11 +211,10 @@ function WeatherHandler({ searchLong, searchLat }) {
  // add loading pattern
  if (isLoading || isLoadingForecast) return <p>Loading...</p>;
  return (
-  <div>
-   Weather by location:
+  <>
    <LocationCards weather={dailyWeather} />
    <LocationCardForecast weatherForecast={weatherForecast} />
-  </div>
+  </>
  );
 }
 
