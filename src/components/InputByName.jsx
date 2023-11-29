@@ -22,6 +22,7 @@ function InputByName({ setSearchLat, setSearchLong }) {
   <form className="search-form" onSubmit={handleSubmit}>
    <label htmlFor="client-input-city"></label>
    <input
+    required
     id="client-input-city"
     type="text"
     placeholder="City Name"

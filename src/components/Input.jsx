@@ -15,6 +15,7 @@ function Input({ setSearchLat, setSearchLong }) {
   <form className="search-form" onSubmit={handleSubmit}>
    <label htmlFor="client-input-latitude"></label>
    <input
+    required
     id="client-input-latitude"
     placeholder="Latitude"
     type="text"
@@ -26,6 +27,7 @@ function Input({ setSearchLat, setSearchLong }) {
    />
    <label htmlFor="client-input-longitude"></label>
    <input
+    required
     id="client-input-longitude"
     type="text"
     placeholder="Longitude"

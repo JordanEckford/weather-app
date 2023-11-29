@@ -8,6 +8,62 @@ export default function LocationCardForecast({ weatherForecast }) {
   <>
    <h2>5 Day Forecast</h2>
    <ul className="weather-forecast">
+    {foreCastArr[0].dt_txt.slice(11, 13) === "03" ? (
+     <>
+      <div className="block"></div>
+     </>
+    ) : null}
+    {foreCastArr[0].dt_txt.slice(11, 13) === "06" ? (
+     <>
+      <div className="block"></div>
+      <div className="block"></div>
+     </>
+    ) : null}
+    {foreCastArr[0].dt_txt.slice(11, 13) === "09" ? (
+     <>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+     </>
+    ) : null}
+    {foreCastArr[0].dt_txt.slice(11, 13) === "12" ? (
+     <>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+     </>
+    ) : null}
+    {foreCastArr[0].dt_txt.slice(11, 13) === "15" ? (
+     <>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+     </>
+    ) : null}
+    {foreCastArr[0].dt_txt.slice(11, 13) === "18" ? (
+     <>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+     </>
+    ) : null}
+    {foreCastArr[0].dt_txt.slice(11, 13) === "21" ? (
+     <>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+     </>
+    ) : null}
     {foreCastArr.map((data, index) => {
      const iconURL = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
      counter++;
@@ -24,6 +80,62 @@ export default function LocationCardForecast({ weatherForecast }) {
       </>
      );
     })}
+    {foreCastArr[0].dt_txt.slice(11, 13) === "03" ? (
+     <>
+      <div className="block"></div>
+     </>
+    ) : null}
+    {foreCastArr[0].dt_txt.slice(11, 13) === "06" ? (
+     <>
+      <div className="block"></div>
+      <div className="block"></div>
+     </>
+    ) : null}
+    {foreCastArr[0].dt_txt.slice(11, 13) === "09" ? (
+     <>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+     </>
+    ) : null}
+    {foreCastArr[0].dt_txt.slice(11, 13) === "12" ? (
+     <>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+     </>
+    ) : null}
+    {foreCastArr[0].dt_txt.slice(11, 13) === "15" ? (
+     <>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+     </>
+    ) : null}
+    {foreCastArr[0].dt_txt.slice(11, 13) === "18" ? (
+     <>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+     </>
+    ) : null}
+    {foreCastArr[0].dt_txt.slice(11, 13) === "21" ? (
+     <>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+      <div className="block"></div>
+     </>
+    ) : null}
    </ul>
   </>
  );
