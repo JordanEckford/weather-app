@@ -13,8 +13,7 @@ function App() {
  return (
   <>
    <Header />
-   {byLatLong ? <Input setSearchLat={setSearchLat} setSearchLong={setSearchLong} /> : <InputByName setSearchLat={setSearchLat} setSearchLong={setSearchLong} />}
-   <SearchControl byLatLong={byLatLong} setByLatLong={setByLatLong} />
+   <InputByName setSearchLat={setSearchLat} setSearchLong={setSearchLong} />
    <WeatherHandler searchLat={searchLat} searchLong={searchLong} />
   </>
  );

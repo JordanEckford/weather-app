@@ -182,6 +182,7 @@ function WeatherHandler({ searchLong, searchLat }) {
 
  const [isLoading, setIsLoading] = useState(true);
  const [isLoadingForecast, setIsLoadingForecast] = useState(true);
+ const [showForecast, setShowForecast] = useState(false);
 
  const appID = "e83d94c936ff7300bff1cfaaae65b2ab";
  const urlDaily = `https://api.openweathermap.org/data/2.5/weather?lat=${searchLat}&lon=${searchLong}&appid=${appID}&units=metric`;
@@ -213,7 +214,14 @@ function WeatherHandler({ searchLong, searchLat }) {
  return (
   <>
    <LocationCards weather={dailyWeather} />
-   <LocationCardForecast weatherForecast={weatherForecast} />
+   <button
+    onClick={() => {
+     setShowForecast(!showForecast);
+    }}
+   >
+    {showForecast ? "less" : "more"} info
+   </button>
+   {showForecast ? <LocationCardForecast weatherForecast={weatherForecast} /> : null}
   </>
  );
 }

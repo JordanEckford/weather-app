@@ -32,7 +32,7 @@ function InputByName({ setSearchLat, setSearchLong }) {
      setUserInput(value);
     }}
    />
-   <button className="submit">Search</button>
+   <button className="submit">+</button>
   </form>
  );
 }
