@@ -6,7 +6,7 @@ function InputByName({ setSearchLat, setSearchLong }) {
  function handleSubmit(submitEvent) {
   submitEvent.preventDefault();
   setUserInput(userInput);
-  const appID = "796a348dc20c3239ab56d7cabc4a83bd";
+ const appID = import.meta.env.VITE_WEATHER_KEY;
   const url = `https://api.openweathermap.org/geo/1.0/direct?q=${userInput}&appid=${appID}`;
 
   fetch(url).then((response) => {
