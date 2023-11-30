@@ -186,7 +186,7 @@ function WeatherHandler({ searchLong, searchLat }) {
 
  const appID = "e83d94c936ff7300bff1cfaaae65b2ab";
  const urlDaily = `https://api.openweathermap.org/data/2.5/weather?lat=${searchLat}&lon=${searchLong}&appid=${appID}&units=metric`;
- const urlForecast = `http://api.openweathermap.org/data/2.5/forecast?lat=${searchLat}&lon=${searchLong}&appid=${appID}`;
+ const urlForecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${searchLat}&lon=${searchLong}&appid=${appID}`;
  function fetchForecasts() {
   fetch(urlDaily).then((response) => {
    return response.json().then((weatherData) => {
@@ -215,11 +215,12 @@ function WeatherHandler({ searchLong, searchLat }) {
   <>
    <LocationCards weather={dailyWeather} />
    <button
+    className="more-info"
     onClick={() => {
      setShowForecast(!showForecast);
     }}
    >
-    {showForecast ? "less" : "more"} info
+    {showForecast ? "hide" : "show"} forecast
    </button>
    {showForecast ? <LocationCardForecast weatherForecast={weatherForecast} /> : null}
   </>
