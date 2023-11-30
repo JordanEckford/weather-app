@@ -184,7 +184,7 @@ function WeatherHandler({ searchLong, searchLat }) {
  const [isLoadingForecast, setIsLoadingForecast] = useState(true);
  const [showForecast, setShowForecast] = useState(false);
 
- const appID = "e83d94c936ff7300bff1cfaaae65b2ab";
+ const appID = import.meta.env.VITE_WEATHER_KEY;
  const urlDaily = `https://api.openweathermap.org/data/2.5/weather?lat=${searchLat}&lon=${searchLong}&appid=${appID}&units=metric`;
  const urlForecast = `https://api.openweathermap.org/data/2.5/forecast?lat=${searchLat}&lon=${searchLong}&appid=${appID}`;
  function fetchForecasts() {
