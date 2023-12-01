@@ -1,10 +1,9 @@
 import { useState } from "react";
 import "./App.css";
 import Header from "./components/Header";
-import Input from "./components/Input";
 import WeatherHandler from "./components/weatherHandler";
 import InputByName from "./components/InputByName";
-import SearchControl from "./components/SearchControl";
+import { GetLocation } from "./components/GetLocation";
 
 function App() {
  const [searchLat, setSearchLat] = useState("53.23812");
@@ -14,6 +13,7 @@ function App() {
   <>
    <Header />
    <InputByName setSearchLat={setSearchLat} setSearchLong={setSearchLong} />
+   <GetLocation setSearchLat={setSearchLat} setSearchLong={setSearchLong} />
    <WeatherHandler searchLat={searchLat} searchLong={searchLong} />
   </>
  );
