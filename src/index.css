@@ -6,8 +6,9 @@ body {
 html {
  background-image: url(/bg.png);
  background-color: rgba(22, 162, 255, 0.541);
- background-repeat: space;
+ background-repeat: no-repeat;
  background-size: cover;
+ background-attachment: fixed;
  margin: 0 auto;
 }
 #root {
@@ -17,11 +18,9 @@ html {
  margin: 0;
 }
 .banner {
- /* background-image: url(https://www.americanelements.com/sites/public/files/images/headers/weather%20mod%20banner.jpg); */
  background-repeat: no-repeat;
  background-size: cover;
  display: flex;
- /* border-bottom: solid black 3px; */
  height: 10vh;
 }
 h1 {
@@ -53,7 +52,8 @@ button {
 
 .location-button {
  margin: 10px auto;
- width: 10%;
+ width: 20%;
+ min-width: 200px;
  display: block;
  border-radius: 10px;
 }
@@ -122,6 +122,7 @@ button:active {
  border-radius: 5px;
  width: 50%;
  min-width: 600px;
+ max-width: 700px;
  height: 400px;
  margin: 20px auto;
  display: grid;
@@ -246,7 +247,8 @@ li {
 }
 .more-info {
  margin: 10px auto;
- width: 10%;
+ width: 20%;
+ min-width: 200px;
  display: block;
  border-radius: 10px;
 }
@@ -258,13 +260,16 @@ li {
  }
  .location-button {
   margin: 10px auto;
-  width: 80%;
+  width: 70%;
   display: block;
   border-radius: 10px;
  }
  .search-arrow {
   width: 20px;
   height: 20px;
+ }
+ .search-form {
+  width: 80%;
  }
  .daily-location {
   font-size: 30px;
