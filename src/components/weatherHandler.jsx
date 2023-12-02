@@ -2,6 +2,7 @@ import LocationCards from "./locationDailyForecast";
 import LocationCardForecast from "./location5DayForecast";
 import { useState, useEffect } from "react";
 import weatherObj from "../templateWeatherObj";
+import LoadingIcons from "react-loading-icons";
 
 function WeatherHandler({ searchLong, searchLat }) {
  const [dailyWeather, setDailyWeather] = useState(weatherObj);
@@ -210,7 +211,14 @@ function WeatherHandler({ searchLong, searchLat }) {
  }, [searchLat, searchLong]);
 
  // add loading pattern
- if (isLoading || isLoadingForecast) return <p>Loading...</p>;
+ if (isLoading || isLoadingForecast)
+  return (
+   <div className="loader-container">
+    <div className="loader-animation">
+     <LoadingIcons.Bars />
+    </div>
+   </div>
+  );
  return (
   <>
    <LocationCards weather={dailyWeather} />
