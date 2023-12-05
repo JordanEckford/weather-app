@@ -271,8 +271,10 @@ li {
 @media only screen and (max-width: 800px) {
  .weather-forecast {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  height: 500px;
+  grid-template-columns: 120px 120px 120px 120px 120px 120px 120px 120px;
+  height: 1500px;
+  width: 90%;
+  overflow: scroll;
  }
  .location-button {
   margin: 10px auto;
@@ -355,9 +357,9 @@ li {
  .search-by {
   width: 30%;
  }
- .block {
+ /* .block {
   display: none;
- }
+ } */
 }
 
 .block {
