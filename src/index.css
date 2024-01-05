@@ -151,18 +151,20 @@ button:active {
  margin: auto auto;
 }
 .daily-img {
- grid-column: 2;
+ grid-column: 1;
  grid-row: 2;
- margin: 0 auto;
- align-self: center;
+ justify-self: center;
+ align-self: start;
  border-radius: 99999px;
- margin-top: 10px;
+ width: 200px;
+ position: relative;
+ top: -100px;
 }
 .daily-description {
  grid-column: 1;
  grid-row: 1;
  align-self: center;
- margin-left: 20px;
+ margin: 0 0 0 20px;
  font-size: 20px;
 }
 .daily-temp {
@@ -183,7 +185,7 @@ button:active {
  height: 100px;
  border: solid rgb(255, 255, 255) 1px;
  border-radius: 9999999px;
- background-color: rgba(0, 0, 0, 0.315);
+ background-color: #fdba00;
 }
 
 .daily-location {
@@ -203,12 +205,11 @@ button:active {
  margin: 0;
 }
 .daily-maxmin {
- grid-column: 1;
+ grid-column: 2;
  grid-row: 2;
- align-self: flex-start;
- margin-top: 20px;
- margin-left: 20px;
+ align-self: center;
  font-size: x-large;
+ text-align: center;
 }
 .loader-container {
  width: 100%;
@@ -227,9 +228,8 @@ button:active {
 .daily-wind {
  grid-column: 1;
  grid-row: 2;
- align-self: flex-end;
+ align-self: center;
  font-size: x-large;
- margin-bottom: 20px;
  margin-left: 20px;
 }
 ul {
